@@ -6,6 +6,7 @@ const author = document.getElementById("author");
 const pages = document.getElementById("pages");
 const read = document.getElementById("read");
 const form = document.getElementById("form");
+const remove = document.querySelector("removeBook");
 
 function Book(title, author, pages, read) {
 	// the constructor...
@@ -24,6 +25,7 @@ function addBookToLibrary(title, author, pages, read) {
 	const newBook = new Book(title, author, pages, read);
 	// newBook.display();
 	myLibrary.push(newBook);
+	return newBook;
 }
 
 form.addEventListener("submit", (e) => {
@@ -41,8 +43,14 @@ form.addEventListener("submit", (e) => {
 	let library = myLibrary.map(function (myLibrary) {
 		return `<div>
 		Title: ${myLibrary.title} , Author: ${myLibrary.author} , Number of Pages: ${myLibrary.pages} , Pages read: ${myLibrary.read}
+		<button type="button" class="removeBook">Remove</button>
 		</div>`;
 	});
 	library = library.join("");
 	bookSection.innerHTML = library;
+});
+
+remove.addEventListener("click", function removeFunc() {
+	myLibrary.splice(index, 1);
+	renderLibrary();
 });
