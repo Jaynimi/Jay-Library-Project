@@ -6,7 +6,6 @@ const author = document.getElementById("author");
 const pages = document.getElementById("pages");
 const read = document.getElementById("read");
 const form = document.getElementById("form");
-const remove = document.querySelector("removeBook");
 
 function Book(title, author, pages, read) {
 	// the constructor...
@@ -28,6 +27,13 @@ function addBookToLibrary(title, author, pages, read) {
 	return newBook;
 }
 
+// function removeFunc(e) {
+// 	const index = e.currentTarget.getAttribute("index");
+// 	console.log(index);
+// 	// myLibrary.splice(index, 1);
+// 	// renderLibrary();
+// }
+
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 
@@ -40,17 +46,27 @@ form.addEventListener("submit", (e) => {
 	console.log(myLibrary);
 	console.log(newAuthor);
 
-	let library = myLibrary.map(function (myLibrary) {
+	let library = myLibrary.map(function (myBook, i) {
 		return `<div>
-		Title: ${myLibrary.title} , Author: ${myLibrary.author} , Number of Pages: ${myLibrary.pages} , Pages read: ${myLibrary.read}
-		<button type="button" class="removeBook">Remove</button>
+		Title: ${myBook.title} , Author: ${myBook.author} , Number of Pages: ${myBook.pages} , Pages read: ${myBook.read}
+		<button type="button" index=${i}  id="removeBook_${i}">Remove</button>
 		</div>`;
 	});
+	const i = library.length - 1;
+
 	library = library.join("");
 	bookSection.innerHTML = library;
+
+	const remove = document.getElementById(`removeBook_${i}`);
+	remove.addEventListener("click", function removeFunc(e) {
+		let index = e.currentTarget.getAttribute("index");
+		console.log(index);
+	});
 });
 
-remove.addEventListener("click", function removeFunc() {
-	myLibrary.splice(index, 1);
-	renderLibrary();
-});
+// remove.addEventListener("click", function removeFunc(e) {
+// 	let index = e.currentTarget.getAttribute("index");
+// 	console.log(index);
+// 	// myLibrary.splice(index, 1);
+// 	// renderLibrary();
+// });
