@@ -28,8 +28,9 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 // function removeFunc(e) {
-// 	const index = e.currentTarget.getAttribute("index");
-// 	console.log(index);
+// 	// const index = e.currentTarget.getAttribute("index");
+// 	let a = myLibrary.length;
+// 	console.log(a);
 // 	// myLibrary.splice(index, 1);
 // 	// renderLibrary();
 // }
@@ -47,21 +48,38 @@ form.addEventListener("submit", (e) => {
 	console.log(newAuthor);
 
 	let library = myLibrary.map(function (myBook, i) {
+		const a = myLibrary.length - 1;
 		return `<div>
 		Title: ${myBook.title} , Author: ${myBook.author} , Number of Pages: ${myBook.pages} , Pages read: ${myBook.read}
-		<button type="button" index=${i}  id="removeBook_${i}">Remove</button>
+		<button type="button" id="removeBook_${i}" index=${i}  >Remove</button>
 		</div>`;
 	});
 	const i = library.length - 1;
+	console.log(i);
 
 	library = library.join("");
 	bookSection.innerHTML = library;
 
 	const remove = document.getElementById(`removeBook_${i}`);
-	remove.addEventListener("click", function removeFunc(e) {
-		let index = e.currentTarget.getAttribute("index");
-		console.log(index);
-	});
+
+	document.getElementById(`removeBook_${i}`).onclick = function () {
+		myFunction();
+	};
+
+	function myFunction() {
+		document.getElementById(`removeBook_${i}`).innerHTML = "YOU CLICKED ME!";
+	}
+
+	// remove.addEventListener("click", function removeFunc(e) {
+	// 	let index = e.currentTarget.getAttribute("index");
+	// 	console.log(index);
+	// });
+
+	// function removeFunc() {==
+	// 	console.log("pretty");
+	// }
+
+	// remove.addEventListener("click", removeFunc);==
 });
 
 // remove.addEventListener("click", function removeFunc(e) {
@@ -70,3 +88,6 @@ form.addEventListener("submit", (e) => {
 // 	// myLibrary.splice(index, 1);
 // 	// renderLibrary();
 // });
+
+// id="removeBook_${i}"
+// onclick="removeFunc()"
