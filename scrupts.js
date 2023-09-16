@@ -1,4 +1,68 @@
-let myLibrary = [];
+let myLibrary = [
+	{
+		title: "The MounTain is You",
+		arthor: "Someone",
+		pages: 64,
+		read: 40,
+		statuss: "Not Read",
+	},
+	{
+		title: "The MounTain is You",
+		arthor: "Someone",
+		pages: 64,
+		read: 40,
+		statuss: "Not Read",
+	},
+	{
+		title: "The MounTain is You",
+		arthor: "Someone",
+		pages: 64,
+		read: 40,
+		statuss: "Not Read",
+	},
+	{
+		title: "The MounTain is You",
+		arthor: "Someone",
+		pages: 64,
+		read: 40,
+		statuss: "Not Read",
+	},
+	{
+		title: "The MounTain is You",
+		arthor: "Someone",
+		pages: 64,
+		read: 40,
+		statuss: "Not Read",
+	},
+	{
+		title: "The MounTain is You",
+		arthor: "Someone",
+		pages: 64,
+		read: 40,
+		statuss: "Not Read",
+	},
+	{
+		title: "The MounTain is You",
+		arthor: "Someone",
+		pages: 64,
+		read: 40,
+		statuss: "Not Read",
+	},
+	{
+		title: "The MounTain is You",
+		arthor: "Someone",
+		pages: 64,
+		read: 40,
+		statuss: "Not Read",
+	},
+	{
+		title: "The MounTain is You",
+		arthor: "Someone",
+		pages: 64,
+		read: 40,
+		statuss: "Not Read",
+	},
+];
 
 const bookSection = document.getElementById("bookSection");
 const title = document.getElementById("title");
