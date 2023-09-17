@@ -10,33 +10,54 @@
 			src="https://kit.fontawesome.com/144b839c36.js"
 			crossorigin="anonymous"></script>
 	</head>
-	<body>
-		<section class="bg-zinc-600">
-			<form action="" id="form" class="bg-green-600">
-				<div>
-					<label for="" class="">Title</label>
-					<input type="text" id="title" />
+	<body class="bg-violet-200 mx-10">
+		<section class="bg-violet-200">
+			<form action="" id="form" class="mt-10 text-violet-950 font-semibold">
+				<div class="my-4">
+					<label for="" class="mx-5">Title</label>
+					<input
+						type="text"
+						id="title"
+						class="rounded-xl bg-gradient-to-r from-violet-500 to-violet-200 w-1/2 h-10 px-4 text-violet-50" />
 				</div>
-				<div>
-					<label for="" class="">Author</label>
-					<input type="text" id="author" />
+				<div class="my-4">
+					<label for="" class="mx-5">Author</label>
+					<input
+						type="text"
+						id="author"
+						class="rounded-xl bg-gradient-to-r from-violet-300 to-violet-500 w-1/2 h-10 px-4 text-violet-50" />
 				</div>
-				<div>
-					<label for="" class="">Pages</label>
-					<input type="number" id="pages" />
+				<div class="my-4">
+					<label for="" class="mx-5">Pages</label>
+					<input
+						type="number"
+						id="pages"
+						class="rounded-xl bg-gradient-to-r from-violet-500 to-violet-200 w-1/2 h-10 px-4 text-violet-50" />
 				</div>
-				<div>
-					<label for="" class="">Pages Read</label>
-					<input type="number" id="read" />
+				<div class="my-4">
+					<label for="" class="mx-5">Pages Read</label>
+					<input
+						type="number"
+						id="read"
+						class="rounded-xl bg-gradient-to-r from-violet-200 to-violet-500 w-1/2 h-10 px-4 text-violet-50" />
 				</div>
-				<div>
-					<label for="status">Status</label>
-					<select name="" id="status">
-						<option value="Read">Read</option>
-						<option value="Not Read">Not Read</option>
+				<div class="my-4">
+					<label for="status" class="mx-5">Status</label>
+					<select
+						name=""
+						id="status"
+						class="mx-5 rounded-xl bg-gradient-to-r from-violet-500 to-violet-200 w-1/2 h-10 px-4">
+						<option value="Read" class="text-violet-50">Read</option>
+
+						<option value="Not Read" class="text-violet-50">Not Read</option>
 					</select>
 				</div>
-				<input type="submit" value="submit" />
+				<div class="">
+					<input
+						type="submit"
+						value="submit"
+						class="mx-5 mb-6 rounded-xl bg-gradient-to-r from-blue-500 to-pink-500 w-1/2 h-10 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300" />
+				</div>
 			</form>
 
 			<div id="bookSection"></div>
