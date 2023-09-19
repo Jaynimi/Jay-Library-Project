@@ -5,71 +5,85 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="output.css" />
+		<link rel="stylesheet" href="style.css" />
 		<!-- <link href="tailwind.css" rel="stylesheet" /> -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" />
 		<script
 			src="https://kit.fontawesome.com/144b839c36.js"
 			crossorigin="anonymous"></script>
 	</head>
 	<body class="bg-violet-200 mx-10">
 		<section class="bg-violet-200">
-			<form action="" id="form" class="mt-10 text-violet-950 font-semibold">
-				<div class="my-4">
-					<label for="" class="mx-5">Title</label>
-					<input
-						type="text"
-						id="title"
-						class="rounded-xl bg-gradient-to-r from-violet-500 to-violet-200 w-1/2 h-10 px-4 text-violet-50" />
-				</div>
-				<div class="my-4">
-					<label for="" class="mx-5">Author</label>
-					<input
-						type="text"
-						id="author"
-						class="rounded-xl bg-gradient-to-r from-violet-300 to-violet-500 w-1/2 h-10 px-4 text-violet-50" />
-				</div>
-				<div class="my-4">
-					<label for="" class="mx-5">Pages</label>
-					<input
-						type="number"
-						id="pages"
-						class="rounded-xl bg-gradient-to-r from-violet-500 to-violet-200 w-1/2 h-10 px-4 text-violet-50" />
-				</div>
-				<div class="my-4">
-					<label for="" class="mx-5">Pages Read</label>
-					<input
-						type="number"
-						id="read"
-						class="rounded-xl bg-gradient-to-r from-violet-300 to-violet-500 w-1/2 h-10 px-4 text-violet-50" />
-				</div>
-				<div class="my-4">
-					<label for="status" class="mx-5">Status</label>
-					<select
-						name=""
-						id="status"
-						class="mx-5 rounded-xl bg-gradient-to-r from-violet-500 to-violet-300 w-1/2 h-10 px-4">
-						<option
-							value="Read"
-							class="text-violet-50 bg-violet-400 hover:bg-violet-600 pa">
-							Read
-						</option>
+			<form
+				action=""
+				id="form"
+				class="mt-10 text-violet-950 font-semibold flexs">
+				<div class="flex flex-col w-full">
+					<div class="try">
+						<label for="" class="mx-5">Title</label>
+						<input
+							type="text"
+							id="title"
+							class="rounded-xl bg-gradient-to-r from-violet-500 to-violet-200 tryI h-10 w-auto px-4 text-violet-50" />
+					</div>
+					<div class="try">
+						<label for="" class="mx-5">Author</label>
+						<input
+							type="text"
+							id="author"
+							class="rounded-xl bg-gradient-to-r from-violet-300 to-violet-500 tryI h-10 px-4 text-violet-50" />
+					</div>
+					<div class="try">
+						<label for="" class="mx-5">Pages</label>
+						<input
+							type="number"
+							id="pages"
+							class="rounded-xl bg-gradient-to-r from-violet-500 to-violet-200 tryI h-10 px-4 text-violet-50" />
+					</div>
+					<div class="try">
+						<label for="" class="mx-5">Pages Read</label>
+						<input
+							type="number"
+							id="read"
+							class="rounded-xl bg-gradient-to-r from-violet-300 to-violet-500 tryI h-10 px-4 text-violet-50" />
+					</div>
+					<div class="try">
+						<label for="status" class="mx-5">Status</label>
+						<select
+							name=""
+							id="status"
+							class="rounded-xl bg-gradient-to-r from-violet-500 to-violet-300 tryI h-10 px-4">
+							<option
+								value="Read"
+								class="text-violet-50 bg-violet-400 hover:bg-violet-600 pa">
+								Read
+							</option>
 
-						<option
-							value="Not Read"
-							class="text-violet-50 bg-violet-400 hover:bg-violet-600">
-							Not Read
-						</option>
-					</select>
+							<option
+								value="Not Read"
+								class="text-violet-50 bg-violet-400 hover:bg-violet-600">
+								Not Read
+							</option>
+						</select>
+					</div>
 				</div>
-				<div class="">
+				<div class="specSub">
 					<input
 						type="submit"
 						value="submit"
-						class="mx-5 mb-6 rounded-xl bg-gradient-to-r bg-violet-300 w-1/2 h-10 hover:bg-violet-600 active:bg-violet-300 focus:outline-none focus:ring focus:ring-violet-300" />
+						class="mb-6 rounded-xl bg-red-400 w-1/2 h-10 hover:bg-violet-600 active:bg-violet-300 focus:outline-none focus:ring focus:ring-violet-300 text-violet-50 subBut" />
 				</div>
 			</form>
 
 			<div id="bookSection"></div>
 		</section>
+
+		<div class="try" style="">
+			<label for="" class="">Title</label>
+			<input type="text" id="" class="w-1/2" />
+		</div>
 
 		<script src="scrupts.js"></script>
 	</body>
