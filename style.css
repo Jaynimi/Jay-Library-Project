@@ -49,3 +49,53 @@ font-family: 'Yellowtail', cursive; */
 .subBut:active {
 	background-color: rgb(46 16 101);
 }
+
+.title {
+	grid-area: title;
+}
+.author {
+	grid-area: author;
+}
+.totalPages {
+	grid-area: totalPages;
+}
+
+.pagesReadContainer {
+	grid-area: readPages;
+}
+
+.status {
+	grid-area: status;
+}
+
+.trash {
+	grid-area: trash;
+}
+
+.itemGrid {
+	display: grid;
+	grid-template-areas:
+		"title title title title"
+		"author author author author" "totalPages totalPages readPages readPages"
+		"status status trash trash";
+	grid-template-rows: auto auto auto auto;
+	gap: 20px;
+	padding: 10px;
+	grid-template-columns: repeat(5, 1fr);
+	max-width: 200px;
+	border: 2px solid red;
+	/* background-color: red; */
+}
+
+.bookSection {
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(100px, 1fr)
+	); /* Automatically adjust the number of boxes per row */
+	gap: 20px;
+	padding: 10px;
+	max-width: 800px;
+	margin: 0 auto;
+	/* background-color: black; */
+}

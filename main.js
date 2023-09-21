@@ -100,13 +100,19 @@ function addBookToLibrary(title, author, pages, read, statuss) {
 function displayBooks() {
 	bookSection.innerHTML = myLibrary
 		.map((myBook, index) => {
-			return `<div> Title: ${myBook.title} , Author: ${myBook.author} , Number of Pages: ${myBook.pages} ,
-			<span> Pages read: <span class="pagesRead">${myBook.read}</span> 
-			<i class="fa-solid fa-arrow-up increaseRead" data-index="${index}"></i>
-			<i class="fa-solid fa-arrow-down decreaseRead" data-index="${index}"></i> 
-			</span>
-			<span id="statusDisplay"> Status: ${myBook.statuss} </span>
-			<button type="button" class="removeBook" data-index="${index}">Remove</button>
+			return `<div class="itemGrid">
+				<div class="title"> Title: ${myBook.title} </div>
+				<div class="author"> Author: ${myBook.author} </div>
+				<div class="totalPages"> Number of Pages: ${myBook.pages} </div>
+				<div class="pagesReadContainer"> 
+					Pages read: <span class="pagesRead">${myBook.read} </span> 
+					<i class="fa-solid fa-arrow-up increaseRead" data-index="${index}"></i>
+					<i class="fa-solid fa-arrow-down decreaseRead" data-index="${index}"></i> 
+				</div>
+				<div class="status" id="statusDisplay"> Status: ${myBook.statuss} </div>
+				<div class="trash">
+					<button type="button" class="removeBook" data-index="${index}">Remove</button>
+				</div>
 		  </div>`;
 		})
 		.join("");
