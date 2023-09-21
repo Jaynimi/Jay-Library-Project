@@ -29,6 +29,15 @@ font-family: 'Yellowtail', cursive; */
 .tryI {
 	width: 70%;
 }
+
+.try1a {
+	background: linear-gradient(to right, #c4b5fd, #ddd6fe);
+}
+
+.try1b {
+	background: linear-gradient(to right, #c4b5fd, #ffe4e6);
+}
+
 .specSub {
 	text-align: center;
 	width: 100%;
@@ -87,7 +96,10 @@ font-family: 'Yellowtail', cursive; */
 	grid-template-columns: repeat(5, 1fr);
 	max-width: 300px;
 	/* border: 2px solid red; */
-	background: linear-gradient(to right, #fecdd3, #d946ef);
+	background: linear-gradient(to right, #c4b5fd, #ffe4e6);
+	box-shadow: 1px 1px 5px 0px #800000;
+	border-radius: 5px;
+	color: #2e1065;
 }
 
 .bookSection {
