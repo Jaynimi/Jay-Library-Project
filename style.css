@@ -144,10 +144,15 @@ font-family: 'Yellowtail', cursive; */
 			"titleDiv titleDiv titleDiv authorDiv authorDiv"
 			"pagesDiv pagesDiv pagesDiv readDiv readDiv" "statusDiv statusDiv statusDiv statusDiv statusDiv";
 		grid-template-rows: auto auto auto auto;
-		/* gap: 20px; */
+		gap: 20px;
 		padding: 10px;
 		grid-template-columns: repeat(5, 1fr);
 		border-radius: 5px;
+		margin-bottom: 40px;
+	}
+
+	.try {
+		margin: 0;
 	}
 
 	/* .submitDiv {
