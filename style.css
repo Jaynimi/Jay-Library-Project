@@ -94,7 +94,7 @@ font-family: 'Yellowtail', cursive; */
 	gap: 20px;
 	padding: 10px;
 	grid-template-columns: repeat(5, 1fr);
-	max-width: 300px;
+	max-width: 390px;
 	/* border: 2px solid red; */
 	background: linear-gradient(to right, #c4b5fd, #ffe4e6);
 	box-shadow: 1px 1px 5px 0px #800000;
@@ -112,6 +112,45 @@ font-family: 'Yellowtail', cursive; */
 	padding: 10px;
 	/* max-width: 800px; */
 	margin: 0 auto;
-	justify-content: space-around;
+	justify-content: center;
+	place-items: center;
 	/* background-color: black; */
+}
+
+@media (min-width: 701px) {
+	.titleDiv {
+		grid-area: titleDiv;
+	}
+
+	.authorDiv {
+		grid-area: authorDiv;
+	}
+
+	.pagesDiv {
+		grid-area: pagesDiv;
+	}
+
+	.readDiv {
+		grid-area: readDiv;
+	}
+
+	.statusDiv {
+		grid-area: statusDiv;
+	}
+
+	.inputDesktop {
+		display: grid;
+		grid-template-areas:
+			"titleDiv titleDiv titleDiv authorDiv authorDiv"
+			"pagesDiv pagesDiv pagesDiv readDiv readDiv" "statusDiv statusDiv statusDiv statusDiv statusDiv";
+		grid-template-rows: auto auto auto auto;
+		/* gap: 20px; */
+		padding: 10px;
+		grid-template-columns: repeat(5, 1fr);
+		border-radius: 5px;
+	}
+
+	/* .submitDiv {
+		grid-area: submitDiv;
+	} */
 }
