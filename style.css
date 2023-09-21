@@ -155,6 +155,14 @@ font-family: 'Yellowtail', cursive; */
 		margin: 0;
 	}
 
+	.try1a {
+		background: linear-gradient(to right, #c4b5fd, #ffe4e6);
+	}
+
+	.try1b {
+		background: linear-gradient(to right, #ffe4e6, #c4b5fd);
+	}
+
 	/* .submitDiv {
 		grid-area: submitDiv;
 	} */
