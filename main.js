@@ -1,63 +1,63 @@
 let myLibrary = [
 	{
 		title: "The MounTain is You",
-		arthor: "Someone",
+		author: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
 		title: "The MounTain is You",
-		arthor: "Someone",
+		author: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
 		title: "The MounTain is You",
-		arthor: "Someone",
+		author: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
 		title: "The MounTain is You",
-		arthor: "Someone",
+		author: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
 		title: "The MounTain is You",
-		arthor: "Someone",
+		author: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
 		title: "The MounTain is You",
-		arthor: "Someone",
+		author: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
 		title: "The MounTain is You",
-		arthor: "Someone",
+		author: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
 		title: "The MounTain is You",
-		arthor: "Someone",
+		author: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
 		title: "The MounTain is You",
-		arthor: "Someone",
+		author: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
@@ -101,7 +101,7 @@ function displayBooks() {
 	bookSection.innerHTML = myLibrary
 		.map((myBook, index) => {
 			return `<div class="itemGrid">
-				<div class="title"> Title: ${myBook.title} </div>
+				<div class="title">${myBook.title} </div>
 				<div class="author"> Author: ${myBook.author} </div>
 				<div class="totalPages"> Number of Pages: ${myBook.pages} </div>
 				<div class="pagesReadContainer"> 
@@ -111,7 +111,7 @@ function displayBooks() {
 				</div>
 				<div class="status" id="statusDisplay"> Status: ${myBook.statuss} </div>
 				<div class="trash">
-					<button type="button" class="removeBook" data-index="${index}">Remove</button>
+					<button type="button" class="removeBook" data-index="${index}"><i class="fa-solid fa-trash-can"></i></button>
 				</div>
 		  </div>`;
 		})

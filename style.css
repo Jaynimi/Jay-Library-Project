@@ -18,6 +18,11 @@ font-family: 'Yellowtail', cursive; */
 * {
 	box-sizing: border-box;
 }
+
+body {
+	margin: 10px 20px;
+}
+
 .try {
 	display: flex;
 	flex-direction: row;
@@ -64,6 +69,22 @@ font-family: 'Yellowtail', cursive; */
 
 .title {
 	grid-area: title;
+	font-weight: 900;
+	/* font-family: "Pacifico", cursive; */
+	/* font-family: "Alex Brush", cursive; */
+	font-family: "Big Shoulders Display", cursive;
+	/* font-family: "Cherry Swash", cursive;
+	font-family: "Italianno", cursive;
+	font-family: "Josefin Sans", sans-serif;
+	font-family: "Kaushan Script", cursive;
+	font-family: "Lobster", cursive;
+	font-family: "Outfit", sans-serif;
+	font-family: "Pacifico", cursive;
+	font-family: "Princess Sofia", cursive;
+	font-family: "Roboto", sans-serif;
+	font-family: "Rochester", cursive;
+	font-family: "Satisfy", cursive;
+	font-family: "Yellowtail", cursive; */ */
 }
 .author {
 	grid-area: author;
@@ -150,14 +171,9 @@ font-family: 'Yellowtail', cursive; */
 
 	.inputDesktop {
 		display: grid;
-		/* grid-template-areas:
-			"titleDiv titleDiv titleDiv authorDiv authorDiv"
-			"pagesDiv pagesDiv pagesDiv readDiv readDiv" "statusDiv statusDiv statusDiv statusDiv statusDiv";
-		grid-template-rows: auto auto auto auto; */
 		gap: 10px;
 		padding: 10px;
 		grid-template-columns: repeat(5, 1fr);
-		/* grid-template-columns: auto auto auto auto auto; */
 		border-radius: 5px;
 		margin-bottom: 40px;
 	}
