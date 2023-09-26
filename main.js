@@ -102,14 +102,14 @@ function displayBooks() {
 		.map((myBook, index) => {
 			return `<div class="itemGrid">
 				<div class="title">${myBook.title} </div>
-				<div class="author"> Author: ${myBook.author} </div>
-				<div class="totalPages"> Number of Pages: ${myBook.pages} </div>
-				<div class="pagesReadContainer"> 
-					Pages read: <span class="pagesRead">${myBook.read} </span> 
-					<i class="fa-solid fa-arrow-up increaseRead" data-index="${index}"></i>
+				<div class="author"> ~${myBook.author} </div>
+				<div class="totalPages">
+					<i class="fa-solid fa-arrow-up increaseRead" data-index="${index}"></i> 
+					${myBook.read} out of ${myBook.pages} pages read 
 					<i class="fa-solid fa-arrow-down decreaseRead" data-index="${index}"></i> 
 				</div>
-				<div class="status" id="statusDisplay"> Status: ${myBook.statuss} </div>
+				
+				<div class="status" id="statusDisplay"> ${myBook.statuss} </div>
 				<div class="trash">
 					<button type="button" class="removeBook" data-index="${index}"><i class="fa-solid fa-trash-can"></i></button>
 				</div>
