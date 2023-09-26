@@ -70,24 +70,16 @@ body {
 .title {
 	grid-area: title;
 	font-weight: 900;
-	/* font-family: "Pacifico", cursive; */
-	/* font-family: "Alex Brush", cursive; */
-	font-family: "Big Shoulders Display", cursive;
-	/* font-family: "Cherry Swash", cursive;
-	font-family: "Italianno", cursive;
-	font-family: "Josefin Sans", sans-serif;
 	font-family: "Kaushan Script", cursive;
-	font-family: "Lobster", cursive;
-	font-family: "Outfit", sans-serif;
-	font-family: "Pacifico", cursive;
-	font-family: "Princess Sofia", cursive;
-	font-family: "Roboto", sans-serif;
-	font-family: "Rochester", cursive;
-	font-family: "Satisfy", cursive;
-	font-family: "Yellowtail", cursive; */ */
+	font-size: 1.5rem;
 }
+
 .author {
 	grid-area: author;
+	font-weight: 500;
+	text-align: right;
+	font-family: "Josefin Sans", sans-serif;
+	/* vertical-align: middle; */
 }
 .totalPages {
 	grid-area: totalPages;
@@ -109,12 +101,12 @@ body {
 	display: grid;
 	grid-template-areas:
 		"title title title title"
-		"author author author author" "totalPages totalPages readPages readPages"
+		"author author author author" " readPages readPages readPages readPages"
 		"status status trash trash";
 	grid-template-rows: auto auto auto auto;
 	gap: 20px;
 	padding: 10px;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	max-width: 390px;
 	/* border: 2px solid red; */
 	background: linear-gradient(to right, #c4b5fd, #ffe4e6);

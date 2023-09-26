@@ -1,63 +1,129 @@
-let myLibrary = [
+// let myLibrary = [
+// 	{
+// 		title: "aThe MounTain is You",
+// 		arthor: "Someone",
+// 		pages: 64,
+// 		read: 40,
+// 		statuss: "Not Read",
+// 	},
+// 	{
+// 		title: "bThe MounTain is You",
+// 		arthor: "Someone",
+// 		pages: 64,
+// 		read: 40,
+// 		statuss: "Not Read",
+// 	},
+// 	{
+// 		title: "cThe MounTain is You",
+// 		arthor: "Someone",
+// 		pages: 64,
+// 		read: 40,
+// 		statuss: "Not Read",
+// 	},
+// 	{
+// 		title: "dThe MounTain is You",
+// 		arthor: "Someone",
+// 		pages: 64,
+// 		read: 40,
+// 		statuss: "Not Read",
+// 	},
+// 	{
+// 		title: "eThe MounTain is You",
+// 		arthor: "Someone",
+// 		pages: 64,
+// 		read: 40,
+// 		statuss: "Not Read",
+// 	},
+// 	{
+// 		title: "fThe MounTain is You",
+// 		arthor: "Someone",
+// 		pages: 64,
+// 		read: 40,
+// 		statuss: "Not Read",
+// 	},
+// 	{
+// 		title: "gThe MounTain is You",
+// 		arthor: "Someone",
+// 		pages: 64,
+// 		read: 40,
+// 		statuss: "Not Read",
+// 	},
+// 	{
+// 		title: "hThe MounTain is You",
+// 		arthor: "Someone",
+// 		pages: 64,
+// 		read: 40,
+// 		statuss: "Not Read",
+// 	},
+// 	{
+// 		title: "iThe MounTain is You",
+// 		arthor: "Someone",
+// 		pages: 64,
+// 		read: 40,
+// 		statuss: "Not Read",
+// 	},
+// ];
+
+let myLibrary = JSON.parse(localStorage.getItem("myLibrary")) || [
 	{
-		title: "The MounTain is You",
-		author: "Someone",
+		title: "aThe MounTain is You",
+		arthor: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
-		title: "The MounTain is You",
-		author: "Someone",
+		title: "bThe MounTain is You",
+		arthor: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
-		title: "The MounTain is You",
-		author: "Someone",
+		title: "cThe MounTain is You",
+		arthor: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
-		title: "The MounTain is You",
-		author: "Someone",
+		title: "dThe MounTain is You",
+		arthor: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
-		title: "The MounTain is You",
-		author: "Someone",
+		title: "eThe MounTain is You",
+		arthor: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
-		title: "The MounTain is You",
-		author: "Someone",
+		title: "fThe MounTain is You",
+		arthor: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
-		title: "The MounTain is You",
-		author: "Someone",
+		title: "gThe MounTain is You",
+		arthor: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
-		title: "The MounTain is You",
-		author: "Someone",
+		title: "hThe MounTain is You",
+		arthor: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
 	},
 	{
-		title: "The MounTain is You",
-		author: "Someone",
+		title: "iThe MounTain is You",
+		arthor: "Someone",
 		pages: 64,
 		read: 40,
 		statuss: "Not Read",
@@ -94,6 +160,9 @@ function addBookToLibrary(title, author, pages, read, statuss) {
 	// newBook.display();
 	myLibrary.push(newBook);
 	return newBook;
+
+	// Store myLibrary in local storage
+	localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
 }
 
 // Function to display books
@@ -101,19 +170,20 @@ function displayBooks() {
 	bookSection.innerHTML = myLibrary
 		.map((myBook, index) => {
 			return `<div class="itemGrid">
-				<div class="title">${myBook.title} </div>
-				<div class="author"> Author: ${myBook.author} </div>
-				<div class="totalPages"> Number of Pages: ${myBook.pages} </div>
-				<div class="pagesReadContainer"> 
-					Pages read: <span class="pagesRead">${myBook.read} </span> 
-					<i class="fa-solid fa-arrow-up increaseRead" data-index="${index}"></i>
-					<i class="fa-solid fa-arrow-down decreaseRead" data-index="${index}"></i> 
-				</div>
-				<div class="status" id="statusDisplay"> Status: ${myBook.statuss} </div>
-				<div class="trash">
-					<button type="button" class="removeBook" data-index="${index}"><i class="fa-solid fa-trash-can"></i></button>
-				</div>
-		  </div>`;
+						<div class="title">${myBook.title} </div>
+						<div class="author"> ~${myBook.author} </div>
+						<div class="pagesReadContainer">
+							
+							<i class="fa-solid fa-arrow-up increaseRead" data-index="${index}"></i>
+							<span class="pagesRead">${myBook.read} </span> out of 
+							<span class="totalPages"> ${myBook.pages} </span> Pages read
+							<i class="fa-solid fa-arrow-down decreaseRead" data-index="${index}"></i> 
+						</div>
+						<div class="status" id="statusDisplay"> Status: ${myBook.statuss} </div>
+						<div class="trash">
+							<button type="button" class="removeBook" data-index="${index}"><i data-index="${index}" class="fa-solid fa-trash-can"></i></button>
+						</div>
+				  </div>`;
 		})
 		.join("");
 
@@ -168,6 +238,9 @@ function displayBooks() {
 			displayBooks(); // Update the displayed books
 		});
 	});
+
+	// Store myLibrary in local storage
+	localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
 }
 
 // Function to handle remove button click
