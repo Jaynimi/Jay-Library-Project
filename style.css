@@ -74,8 +74,15 @@ body {
 	font-size: 1.5rem;
 }
 
+	font-size: 1.5rem;
+}
+
 .author {
 	grid-area: author;
+	font-weight: 500;
+	text-align: right;
+	font-family: "Josefin Sans", sans-serif;
+	/* vertical-align: middle; */
 	font-weight: 500;
 	text-align: right;
 	font-family: "Josefin Sans", sans-serif;
