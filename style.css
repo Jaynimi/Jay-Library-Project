@@ -74,9 +74,6 @@ body {
 	font-size: 1.5rem;
 }
 
-	font-size: 1.5rem;
-}
-
 .author {
 	grid-area: author;
 	font-weight: 500;
@@ -94,6 +91,7 @@ body {
 
 .pagesReadContainer {
 	grid-area: readPages;
+	text-align: center;
 }
 
 .status {
