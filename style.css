@@ -23,6 +23,11 @@ body {
 	margin: 10px 20px;
 }
 
+#afterName {
+	display: flex;
+	flex-direction: row;
+}
+
 .try {
 	display: flex;
 	flex-direction: row;
@@ -105,13 +110,14 @@ body {
 .itemGrid {
 	display: grid;
 	grid-template-areas:
-		"title title title title"
-		"author author author author" " readPages readPages readPages readPages"
-		"status status trash trash";
-	grid-template-rows: auto auto auto auto;
+		"title title title title title"
+		"author author author author author"
+		"readPages readPages readPages readPages readPages"
+		"status status status status trash";
+	grid-template-rows: auto auto auto auto auto;
 	gap: 20px;
 	padding: 10px;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(5, 1fr);
 	max-width: 390px;
 	/* border: 2px solid red; */
 	background: linear-gradient(to right, #c4b5fd, #ffe4e6);
