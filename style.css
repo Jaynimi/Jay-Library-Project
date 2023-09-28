@@ -69,6 +69,12 @@ body {
 .introText {
 	font-size: 14px;
 	padding: 0 10px;
+	text-align: left;
+}
+
+.promptText {
+	font-weight: 500;
+	margin-top: 10px;
 }
 
 #afterName {
