@@ -64,25 +64,25 @@ const specialGreeting = document.getElementById("specialGreeting");
 
 const storedName = localStorage.getItem("username");
 
-if (storedName) {
-	nameForm.style.display = "none"; // or visibility: hidden if you prefer
-	specialGreeting.textContent = `${storedName}'s`;
-} else {
-	nameForm.style.display = "block";
+// if (storedName) {
+// 	nameForm.style.display = "none"; // or visibility: hidden if you prefer
+// 	specialGreeting.textContent = `${storedName}'s`;
+// } else {
+// 	nameForm.style.display = "block";
 
-	nameForm.addEventListener("submit", (e) => {
-		e.preventDefault();
+// 	nameForm.addEventListener("submit", (e) => {
+// 		e.preventDefault();
 
-		const username = UserName.value;
+// 		const username = UserName.value;
 
-		localStorage.setItem("username", username);
+// 		localStorage.setItem("username", username);
 
-		nameForm.style.display = "none";
+// 		nameForm.style.display = "none";
 
-		specialGreeting.textContent = `${username}'s`; // Use 'username' instead of 'storedName'
-		console.log(username);
-	});
-}
+// 		specialGreeting.textContent = `${username}'s`; // Use 'username' instead of 'storedName'
+// 		console.log(username);
+// 	});
+// }
 
 // form.addEventListener("submit", (e) => {
 // 	e.preventDefault();
