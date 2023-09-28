@@ -70,6 +70,8 @@ body {
 	font-size: 14px;
 	padding: 0 10px;
 	text-align: left;
+	padding-bottom: 15px;
+	border-bottom: 2px solid rgb(168, 168, 168);
 }
 
 .promptText {
@@ -79,6 +81,7 @@ body {
 
 #submitNameInput {
 	padding: 2px 8px 8px 8px;
+	width: 45%;
 }
 
 #submitNameInput:active,
@@ -93,7 +96,6 @@ body {
 	padding: 0 0 6px 8px;
 	/* font-family: "Kaushan Script", cursive; */
 	font-family: "Lobster", cursive;
-
 	color: #ffe4e6;
 	letter-spacing: 0.3rem;
 	border-radius: 5px;
