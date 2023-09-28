@@ -77,6 +77,40 @@ body {
 	margin-top: 10px;
 }
 
+#submitNameInput {
+	padding: 2px 8px 8px 8px;
+}
+
+#submitNameInput:active,
+#submitNameInput:focus {
+	border: transparent;
+}
+
+#submitNameBtn {
+	background-color: #800000;
+	height: 44px;
+	font-weight: 500;
+	padding: 0 0 6px 8px;
+	/* font-family: "Kaushan Script", cursive; */
+	font-family: "Lobster", cursive;
+
+	color: #ffe4e6;
+	letter-spacing: 0.3rem;
+	border-radius: 5px;
+}
+
+#submitNameBtn:hover {
+	border: 2px solid #d0bcf7;
+	background-color: transparent;
+	color: #800000;
+}
+
+#submitNameBtn:focus {
+	border: transparent;
+	background-color: #360019c9;
+	color: #ffe4e6;
+}
+
 #afterName {
 	display: none;
 	flex-direction: row;
