@@ -1,49 +1,50 @@
 let myLibrary = JSON.parse(localStorage.getItem("myLibrary")) || [
 	{
 		title: "Harry Potter and the Sorcerer's Stone",
-		arthor: "J.K. Rowling",
+		author: "J.K. Rowling",
 		pages: 320,
 		read: 0,
 		statuss: "Not Read",
 	},
 	{
 		title: "Harry Potter and the Chamber of Secrets",
-		arthor: "J.K. Rowling",
+		author: "J.K. Rowling",
 		pages: 352,
 		read: 0,
 		statuss: "Not Read",
 	},
 	{
 		title: "Harry Potter and the Prisoner of Azkaban",
-		arthor: "J. K. Rowling",
+		author: "J. K. Rowling",
 		pages: 448,
 		read: 0,
 		statuss: "Not Read",
 	},
 	{
 		title: "Harry Potter and the Goblet of Fire",
-		arthor: "J. K. Rowling",
+		author: "J. K. Rowling",
 		pages: 752,
 		read: 0,
 		statuss: "Not Read",
 	},
+
 	{
 		title: "Harry Potter and the Order of the Phoenix",
-		arthor: "J. K. Rowling",
+		author: "J. K. Rowling",
 		pages: 870,
 		read: 0,
 		statuss: "Not Read",
 	},
 	{
 		title: "Harry Potter and the Half-Blood Prince",
-		arthor: "J. K. Rowling",
+		author: "J. K. Rowling",
 		pages: 652,
 		read: 0,
 		statuss: "Not Read",
 	},
 	{
 		title: "Harry Potter and the Deathly Hallows",
-		arthor: "J. K. Rowling",
+		author: "J. K. Rowling",
 		pages: 784,
 		read: 0,
 		statuss: "Not Read",
@@ -61,28 +62,44 @@ const nameForm = document.getElementById("beforeName");
 const UserName = document.getElementById("submitNameInput");
 const submitName = document.getElementById("submitNameBtn");
 const specialGreeting = document.getElementById("specialGreeting");
+const nav = document.getElementById("navHeader");
+
+// script.js
+let prevScrollPosition = window.pageYOffset;
+
+window.addEventListener("scroll", () => {
+	const scrollPosition = window.pageYOffset;
+
+	if (scrollPosition >= 60 && scrollPosition < prevScrollPosition) {
+		nav.classList.add("sticky-shadow");
+	} else {
+		nav.classList.remove("sticky-shadow");
+	}
+
+	prevScrollPosition = scrollPosition;
+});
 
 const storedName = localStorage.getItem("username");
 
-// if (storedName) {
-// 	nameForm.style.display = "none"; // or visibility: hidden if you prefer
-// 	specialGreeting.textContent = `${storedName}'s`;
-// } else {
-// 	nameForm.style.display = "block";
+if (storedName) {
+	nameForm.style.display = "none"; // or visibility: hidden if you prefer
+	specialGreeting.textContent = `${storedName}'s`;
+} else {
+	nameForm.style.display = "block";
 
-// 	nameForm.addEventListener("submit", (e) => {
-// 		e.preventDefault();
+	nameForm.addEventListener("submit", (e) => {
+		e.preventDefault();
 
-// 		const username = UserName.value;
+		const username = UserName.value;
 
-// 		localStorage.setItem("username", username);
+		localStorage.setItem("username", username);
 
-// 		nameForm.style.display = "none";
+		nameForm.style.display = "none";
 
-// 		specialGreeting.textContent = `${username}'s`; // Use 'username' instead of 'storedName'
-// 		console.log(username);
-// 	});
-// }
+		specialGreeting.textContent = `${username}'s`; // Use 'username' instead of 'storedName'
+		console.log(username);
+	});
+}
 
 // form.addEventListener("submit", (e) => {
 // 	e.preventDefault();
