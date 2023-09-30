@@ -30,7 +30,6 @@ body {
 	text-align: center;
 	place-items: center;
 	display: grid;
-	/* background-color: rgb(11, 4, 26); */
 	background-color: #f6f5f3;
 	border-radius: 8px;
 	padding: 10px;
@@ -38,8 +37,8 @@ body {
 
 #beforeName {
 	position: fixed;
-	/* top: 0; */
-	/* left: 0; */
+	/* top: 0;
+	left: 0; */
 	/* background: #7dce9481; */
 	background: #000000cc;
 	width: 100%;
