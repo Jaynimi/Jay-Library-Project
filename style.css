@@ -38,8 +38,8 @@ body {
 
 #beforeName {
 	position: fixed;
-	top: 0;
-	left: 0;
+	/* top: 0; */
+	/* left: 0; */
 	/* background: #7dce9481; */
 	background: #000000cc;
 	width: 100%;
@@ -118,7 +118,7 @@ body {
 	flex-direction: row;
 	width: 100%;
 	padding: 20px 25px;
-	box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 30px 15px rgba(0, 0, 0, 0.1);
 	font-size: 2rem;
 }
 
@@ -127,7 +127,7 @@ body {
 	top: 0;
 	left: 0;
 	z-index: 50;
-	background-color: #716a85;
+	background-color: #716a85f5;
 	color: #ddd6fe;
 }
 
@@ -248,6 +248,28 @@ body {
 	justify-content: center;
 	place-items: center;
 	/* background-color: black; */
+}
+
+.pagesReadContainer i {
+	font-size: 1.9rem;
+}
+
+.increaseRead {
+	color: rgb(0, 43, 0);
+	margin-right: 5px;
+}
+
+.decreaseRead {
+	color: rgb(116, 0, 0);
+	margin-left: 5px;
+}
+
+.pagesRead {
+	font-size: 1.5rem;
+}
+
+.totalPages {
+	font-size: 1.5rem;
 }
 
 @media (min-width: 701px) {
