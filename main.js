@@ -63,6 +63,7 @@ const UserName = document.getElementById("submitNameInput");
 const submitName = document.getElementById("submitNameBtn");
 const specialGreeting = document.getElementById("specialGreeting");
 const nav = document.getElementById("navHeader");
+const nameIcon = document.getElementById("afterName");
 
 // script.js
 let prevScrollPosition = window.pageYOffset;
@@ -81,41 +82,25 @@ window.addEventListener("scroll", () => {
 
 const storedName = localStorage.getItem("username");
 
-if (storedName) {
-	nameForm.style.display = "none"; // or visibility: hidden if you prefer
-	specialGreeting.textContent = `${storedName}'s`;
-} else {
-	nameForm.style.display = "block";
+// if (storedName) {
+// 	nameForm.style.display = "none"; // or visibility: hidden if you prefer
+// 	specialGreeting.textContent = `${storedName}'s`;
+// } else {
+// 	nameForm.style.display = "block";
 
-	nameForm.addEventListener("submit", (e) => {
-		e.preventDefault();
+// 	nameForm.addEventListener("submit", (e) => {
+// 		e.preventDefault();
 
-		const username = UserName.value;
+// 		const username = UserName.value;
 
-		localStorage.setItem("username", username);
+// 		localStorage.setItem("username", username);
 
-		nameForm.style.display = "none";
+// 		nameForm.style.display = "none";
 
-		specialGreeting.textContent = `${username}'s`; // Use 'username' instead of 'storedName'
-		console.log(username);
-	});
-}
-
-// form.addEventListener("submit", (e) => {
-// 	e.preventDefault();
-
-// 	const newTitle = title.value;
-// 	const newAuthor = author.value;
-// 	const newPages = pages.value;
-// 	const newRead = read.value;
-// 	const newStatuss = statuss.value;
-
-// 	addBookToLibrary(newTitle, newAuthor, newPages, newRead, newStatuss);
-// 	console.log(myLibrary);
-// 	console.log(newAuthor);
-
-// 	displayBooks(); // Update the displayed books
-// });
+// 		specialGreeting.textContent = `${username}'s`; // Use 'username' instead of 'storedName'
+// 		console.log(username);
+// 	});
+// }
 
 function Book(title, author, pages, read, statuss) {
 	// the constructor...
