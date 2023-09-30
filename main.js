@@ -80,25 +80,25 @@ window.addEventListener("scroll", () => {
 	prevScrollPosition = scrollPosition;
 });
 
-const storedNames = localStorage.getItem("usernames");
+const storedName = localStorage.getItem("username");
 
-if (storedNames) {
+if (storedName) {
 	nameForm.style.display = "none"; // or visibility: hidden if you prefer
-	specialGreeting.textContent = `${storedNames}'s`;
+	specialGreeting.textContent = `${storedName}'s`;
 } else {
 	nameForm.style.display = "block";
 
 	nameForm.addEventListener("submit", (e) => {
 		e.preventDefault();
 
-		const usernames = UserName.value;
+		const username = UserName.value;
 
-		localStorage.setItem("usernames", usernames);
+		localStorage.setItem("username", username);
 
 		nameForm.style.display = "none";
 
-		specialGreeting.textContent = `${usernames}'s`; // Use 'username' instead of 'storedName'
-		console.log(usernames);
+		specialGreeting.textContent = `${username}'s`; // Use 'username' instead of 'storedName'
+		console.log(username);
 	});
 }
 
