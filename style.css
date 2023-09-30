@@ -24,8 +24,10 @@ body {
 }
 
 .beforeNameContainer {
+	left: 12%;
+	top: 30%;
 	position: relative;
-	width: 75%;
+	width: 76%;
 	height: 40%;
 	text-align: center;
 	place-items: center;
@@ -37,8 +39,8 @@ body {
 
 #beforeName {
 	position: fixed;
-	/* top: 0;
-	left: 0; */
+	top: 0;
+	left: 0;
 	/* background: #7dce9481; */
 	background: #000000cc;
 	width: 100%;
