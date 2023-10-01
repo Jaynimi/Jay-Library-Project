@@ -143,7 +143,7 @@ function displayBooks() {
 							<span class="totalPages"> ${myBook.pages} </span> Pages read
 							<i class="fa-solid fa-arrow-down decreaseRead" data-index="${index}"></i> 
 						</div>
-						<div class="status" id="statusDisplay"> Status: ${myBook.statuss} </div>
+						<div class="status" id="statusDisplay">${myBook.statuss} </div>
 						<div class="trash">
 							<button type="button" class="removeBook" data-index="${index}"><i data-index="${index}" class="fa-solid fa-trash-can"></i></button>
 						</div>
