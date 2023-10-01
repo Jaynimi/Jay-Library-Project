@@ -258,6 +258,8 @@ body {
 .increaseRead {
 	color: rgb(0, 43, 0);
 	margin-right: 5px;
+	text-align: left;
+	width: 10%;
 }
 
 .decreaseRead {
