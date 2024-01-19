@@ -23,6 +23,10 @@ body {
 	/* margin: 10px 20px; */
 }
 
+#form {
+	margin-bottom: 70px;
+}
+
 .beforeNameContainer {
 	left: 12%;
 	top: 30%;
